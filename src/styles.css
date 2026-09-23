@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Syne:wght@500;600;700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Figtree", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Syne", "Figtree", ui-sans-serif, system-ui, sans-serif;
+
+  --color-background: #08090d;
+  --color-foreground: #f2f3f7;
+  --color-card: #12141a;
+  --color-muted: #9aa3b2;
+  --color-muted-foreground: #9aa3b2;
+  --color-subtle: #6d7585;
+  --color-primary: #e8eaef;
+  --color-primary-foreground: #0b0c10;
+  --color-accent: #9eb4c8;
+  --color-border: color-mix(in oklab, #f2f3f7 14%, transparent);
+  --color-ring: #c5d0dc;
+  --color-destructive: #d5756a;
+  --color-ok: #7dba98;
+
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1.25rem;
+  --radius-xl: 1.5rem;
+  --radius-2xl: 1.75rem;
+  --radius-3xl: 2rem;
+
+  --shadow-border:
+    0 0 0 1px color-mix(in oklab, #f2f3f7 12%, transparent),
+    0 18px 50px color-mix(in oklab, #000 42%, transparent);
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: var(--color-background);
+    color: var(--color-foreground);
+  }
+
+  body {
+    min-height: 100dvh;
+    background-color: var(--color-background);
+    background-image:
+      radial-gradient(1000px 520px at 50% -8%, color-mix(in oklab, var(--color-accent) 10%, transparent), transparent 62%),
+      radial-gradient(700px 360px at 100% 110%, color-mix(in oklab, var(--color-foreground) 5%, transparent), transparent 55%);
+    color: var(--color-foreground);
+  }
+
+  h1, h2, h3 {
+    text-wrap: balance;
+    font-family: var(--font-display);
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+.glass {
+  background: color-mix(in oklab, var(--color-foreground) 6.5%, transparent);
+  backdrop-filter: blur(28px) saturate(1.35);
+  -webkit-backdrop-filter: blur(28px) saturate(1.35);
+  box-shadow:
+    var(--shadow-border),
+    inset 0 1px 0 color-mix(in oklab, var(--color-foreground) 16%, transparent);
+}
+
+.glass-btn {
+  background: color-mix(in oklab, var(--color-foreground) 7%, transparent);
+  box-shadow:
+    0 0 0 1px color-mix(in oklab, var(--color-foreground) 12%, transparent),
+    inset 0 1px 0 color-mix(in oklab, var(--color-foreground) 14%, transparent);
+}
+
+.grain {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  opacity: 0.035;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='0.9'/%3E%3C/svg%3E");
+}
+
+.timeline-fill {
+  background: color-mix(in oklab, var(--color-accent) 55%, var(--color-foreground) 20%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glass,
+  .glass-btn {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+}

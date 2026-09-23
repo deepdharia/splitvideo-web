@@ -1,0 +1,14 @@
+node_modules
+.vercel
+.output
+.nitro
+dist
+screenshots
+artifacts
+tmp
+*.log
+.DS_Store
+.grok/*
+!.grok/app-env.json
+routeTree.gen.ts
+src/routeTree.gen.ts
