@@ -13,7 +13,7 @@ export const Route = createFileRoute("/")({
           "Split videos into equal parts, time-based clips, ranges, or custom cut points in your browser. Your video stays on your device.",
       },
     ],
-    links: [{ rel: "canonical", href: "https://splitvideo.in/" }],
+    links: [{ rel: "canonical", href: "https://www.splitvideo.in/" }],
   }),
   component: Home,
 });
@@ -141,7 +141,7 @@ function Home() {
 
       <section
         id="faq"
-        className="mx-auto w-full max-w-5xl px-4 pb-10"
+        className="mx-auto w-full max-w-5xl px-4 pb-6"
         aria-labelledby="faq-title"
       >
         <div className="glass rounded-3xl p-6 sm:p-8">
@@ -185,15 +185,49 @@ function Home() {
         </div>
       </section>
 
+      <section
+        id="dedication"
+        className="mx-auto w-full max-w-5xl px-4 pb-10"
+        aria-labelledby="dedication-title"
+      >
+        <div className="glass rounded-3xl p-6 sm:p-8">
+          <p className="text-xs font-medium uppercase tracking-[0.18em] text-muted">
+            Dedication
+          </p>
+          <h2 id="dedication-title" className="mt-2 text-2xl font-semibold sm:text-3xl">
+            For anyone who only needed one moment
+          </h2>
+          <p className="mt-3 max-w-3xl text-sm leading-6 text-muted sm:text-base">
+            SplitVideo is dedicated to anyone who has waited on an upload bar just to
+            cut a clip — and to the idea that a personal video should not have to
+            leave the phone to be useful.
+          </p>
+          <p className="mt-4 text-sm leading-6 text-foreground/80">
+            Made by Deep Dharia. India, 2026.
+          </p>
+        </div>
+      </section>
+
       <footer className="border-t border-border/60">
         <div className="mx-auto flex w-full max-w-5xl flex-col gap-3 px-4 py-6 text-xs text-muted sm:flex-row sm:items-center sm:justify-between">
-          <p>© 2026 SplitVideo. All rights reserved.</p>
+          <p>© 2026 SplitVideo. Built by Deep Dharia.</p>
           <nav aria-label="Footer">
             <div className="flex flex-wrap gap-x-4 gap-y-2">
-              <a className="hover:text-foreground" href="#how-it-works">How it works</a>
-              <a className="hover:text-foreground" href="#use-cases">Use cases</a>
-              <a className="hover:text-foreground" href="#privacy">Privacy</a>
-              <a className="hover:text-foreground" href="#faq">FAQ</a>
+              <a className="hover:text-foreground" href="#how-it-works">
+                How it works
+              </a>
+              <a className="hover:text-foreground" href="#use-cases">
+                Use cases
+              </a>
+              <a className="hover:text-foreground" href="#privacy">
+                Privacy
+              </a>
+              <a className="hover:text-foreground" href="#faq">
+                FAQ
+              </a>
+              <a className="hover:text-foreground" href="#dedication">
+                Dedication
+              </a>
             </div>
           </nav>
         </div>

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://splitvideo.in/sitemap.xml
+Sitemap: https://www.splitvideo.in/sitemap.xml
