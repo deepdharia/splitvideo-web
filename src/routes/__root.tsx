@@ -21,6 +21,8 @@ export const Route = createRootRoute({
       { name: "robots", content: "index, follow, max-image-preview:large" },
       { name: "theme-color", content: "#08090d" },
       { name: "apple-mobile-web-app-capable", content: "yes" },
+      { name: "author", content: "SplitVideo.in" },
+      { name: "application-name", content: "SplitVideo" },
     ],
     links: [
       { rel: "canonical", href: "https://www.splitvideo.in/" },
@@ -34,6 +36,11 @@ export const Route = createRootRoute({
     <html lang="en" className="antialiased" suppressHydrationWarning>
       <head>
         <HeadContent />
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8886727331242294"
+          crossOrigin="anonymous"
+        />
       </head>
       <body className="min-h-dvh bg-background text-foreground">
         <PreviewHostBridge />
