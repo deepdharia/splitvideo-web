@@ -5,34 +5,35 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-        title: "SplitVideo — Free Online Video Splitter | On-Device, No Upload",
+        title: "Split Video Online Free | SplitVideo — On-Device Video Splitter",
       },
       {
         name: "description",
         content:
-          "Split long videos into equal parts, time-based clips, or custom segments right in your browser. Built for gamers and creators. Your file never leaves your device. Works on iPhone, Android, and desktop.",
+          "SplitVideo — free online video splitter. Split any video into equal parts or by time in your browser. No upload, no watermark. Works on iPhone, Android & desktop.",
       },
       {
         property: "og:title",
-        content: "SplitVideo — Free Online Video Splitter | On-Device, No Upload",
+        content: "Split Video Online Free | SplitVideo — On-Device Video Splitter",
       },
       {
         property: "og:description",
         content:
-          "Split long videos into equal parts, time-based clips, or custom segments right in your browser. Your file never leaves your device.",
+          "Free online video splitter. Split into equal parts or by time. No upload. Works on phone and desktop.",
       },
       { property: "og:url", content: "https://www.splitvideo.in/" },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "SplitVideo.in" },
+      { property: "og:image", content: "https://www.splitvideo.in/og.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
       {
         name: "twitter:title",
-        content: "SplitVideo — Free Online Video Splitter",
+        content: "Split Video Online Free | SplitVideo",
       },
       {
         name: "twitter:description",
         content:
-          "Split long videos into equal parts or time-based clips in your browser. No upload. Works on iPhone and Android.",
+          "Free online video splitter. Equal parts or by time. No upload. iPhone & Android.",
       },
     ],
     links: [{ rel: "canonical", href: "https://www.splitvideo.in/" }],
@@ -45,9 +46,15 @@ export const Route = createFileRoute("/")({
             {
               "@type": "WebApplication",
               name: "SplitVideo",
+              alternateName: [
+                "Split Video",
+                "SplitVideo.in",
+                "Online Video Splitter",
+                "Free Video Splitter",
+              ],
               url: "https://www.splitvideo.in/",
               description:
-                "Free browser-based video splitter that processes files on your device. Split into equal parts, by time interval, range, or custom cut points. No upload required.",
+                "Free online video splitter that works in your browser. Split any video into equal parts or by time. No upload, no watermark. On-device processing for iPhone, Android, and desktop.",
               applicationCategory: "MultimediaApplication",
               operatingSystem: "Any (modern browser)",
               offers: {
@@ -65,6 +72,8 @@ export const Route = createFileRoute("/")({
                 "No file upload",
                 "Works on iPhone and Android browsers",
               ],
+              image: "https://www.splitvideo.in/og.jpg",
+              screenshot: "https://www.splitvideo.in/og.jpg",
             },
             {
               "@type": "FAQPage",
@@ -113,11 +122,15 @@ export const Route = createFileRoute("/")({
             },
             {
               "@type": "Organization",
-              name: "SplitVideo.in",
+              name: "SplitVideo",
+              alternateName: "SplitVideo.in",
               url: "https://www.splitvideo.in/",
               email: "build@splitvideo.in",
+              logo: "https://www.splitvideo.in/favicon.svg",
+              image: "https://www.splitvideo.in/og.jpg",
               description:
-                "On-device browser video splitter built for creators who need simple, private ways to turn long recordings into shorter clips.",
+                "SplitVideo is a free online video splitter. Split videos into equal parts or by time on your device — no upload required.",
+              sameAs: [],
             },
           ],
         }),
@@ -139,10 +152,10 @@ function Home() {
       >
         <div className="glass rounded-3xl p-6 sm:p-8">
           <p className="text-xs font-medium uppercase tracking-[0.18em] text-muted">
-            Video splitting without the upload step
+            Free online video splitter
           </p>
           <h2 id="how-it-works-title" className="mt-2 text-2xl font-semibold sm:text-3xl">
-            Split a video online while keeping the file on your device
+            Split video online — equal parts or by time, on your device
           </h2>
           <p className="mt-3 max-w-3xl text-sm leading-6 text-muted sm:text-base">
             SplitVideo is a free browser-based video splitter for turning one long
