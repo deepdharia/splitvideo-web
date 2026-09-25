@@ -40,4 +40,24 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://www.splitvideo.in/about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.splitvideo.in/privacy</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.splitvideo.in/terms</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.splitvideo.in/contact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
 </urlset>
