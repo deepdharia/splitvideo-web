@@ -59,11 +59,17 @@ export function SeoPageLayout({
             <Link to="/" className="hover:text-foreground">
               Tool
             </Link>
-            <Link to="/split-video-online" className="hover:text-foreground">
-              Split online
+            <Link to="/about" className="hover:text-foreground">
+              About
             </Link>
-            <Link to="/split-video-into-equal-parts" className="hover:text-foreground">
-              Equal parts
+            <Link to="/privacy" className="hover:text-foreground">
+              Privacy
+            </Link>
+            <Link to="/terms" className="hover:text-foreground">
+              Terms
+            </Link>
+            <Link to="/contact" className="hover:text-foreground">
+              Contact
             </Link>
             <Link to="/video-splitter-faq" className="hover:text-foreground">
               FAQ
