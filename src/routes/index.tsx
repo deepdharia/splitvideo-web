@@ -130,7 +130,7 @@ export const Route = createFileRoute("/")({
               image: "https://www.splitvideo.in/og.jpg",
               description:
                 "SplitVideo is a free online video splitter. Split videos into equal parts or by time on your device — no upload required.",
-              sameAs: [],
+              sameAs: ["https://www.linkedin.com/company/splitvideo/"],
             },
           ],
         }),
@@ -446,13 +446,30 @@ function Home() {
       </section>
 
       <footer className="border-t border-border/60">
-        <div className="mx-auto flex w-full max-w-5xl flex-col gap-3 px-4 py-6 text-xs text-muted sm:flex-row sm:items-center sm:justify-between">
+        <div className="mx-auto flex w-full max-w-5xl flex-col gap-3 px-4 py-6 text-xs text-muted sm:flex-row sm:items-center sm:justify-between sm:gap-4">
           <p>
             © {new Date().getFullYear()} SplitVideo.in · Contact:{" "}
             <a href="mailto:build@splitvideo.in" className="hover:text-foreground">
               build@splitvideo.in
             </a>
           </p>
+            <a
+              href="https://www.linkedin.com/company/splitvideo/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 rounded-md border border-border/60 bg-foreground/5 px-2.5 py-1 text-xs font-medium text-muted transition-colors hover:border-border hover:bg-foreground/10 hover:text-foreground"
+              aria-label="SplitVideo on LinkedIn"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                className="size-3.5 shrink-0"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+              LinkedIn
+            </a>
           <nav aria-label="Footer">
             <div className="flex flex-wrap gap-x-4 gap-y-2">
               <a className="hover:text-foreground" href="#how-it-works">
