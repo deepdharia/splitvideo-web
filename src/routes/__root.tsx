@@ -24,16 +24,25 @@ export const Route = createRootRoute({
       { name: "robots", content: "index, follow, max-image-preview:large" },
       { name: "theme-color", content: "#08090d" },
       { name: "apple-mobile-web-app-capable", content: "yes" },
+      { name: "apple-mobile-web-app-title", content: "SplitVideo" },
       { name: "author", content: "SplitVideo.in" },
       { name: "application-name", content: "SplitVideo" },
-      { name: "keywords", content: "split video, video splitter, split video online, split video into equal parts, split video by time, free video splitter, on device video splitter, split MP4, split video iPhone, split video Android" },
+      {
+        name: "keywords",
+        content:
+          "split video, video splitter, split video online, split video into equal parts, split video by time, free video splitter, on device video splitter, split MP4, split video iPhone, split video Android",
+      },
     ],
     links: [
       { rel: "canonical", href: "https://www.splitvideo.in/" },
       { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
-      { rel: "apple-touch-icon", href: "/__grok/icon-180.png" },
+      { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32.png" },
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      { rel: "apple-touch-icon", sizes: "180x180", href: "/icon-192.png" },
+      { rel: "icon", type: "image/png", sizes: "192x192", href: "/icon-192.png" },
+      { rel: "icon", type: "image/png", sizes: "512x512", href: "/icon-512.png" },
+      { rel: "manifest", href: "/site.webmanifest" },
       { rel: "stylesheet", href: appCss },
-      { rel: "manifest", href: "/__grok/manifest.webmanifest" },
     ],
   }),
   component: () => (
