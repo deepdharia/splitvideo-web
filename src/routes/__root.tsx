@@ -35,12 +35,10 @@ export const Route = createRootRoute({
     ],
     links: [
       { rel: "canonical", href: "https://www.splitvideo.in/" },
+      // SplitVideo brand mark — same icon on every page
       { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
-      { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32.png" },
-      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
-      { rel: "apple-touch-icon", sizes: "180x180", href: "/icon-192.png" },
-      { rel: "icon", type: "image/png", sizes: "192x192", href: "/icon-192.png" },
-      { rel: "icon", type: "image/png", sizes: "512x512", href: "/icon-512.png" },
+      { rel: "apple-touch-icon", href: "/favicon.svg" },
+      { rel: "mask-icon", href: "/favicon.svg", color: "#08090d" },
       { rel: "manifest", href: "/site.webmanifest" },
       { rel: "stylesheet", href: appCss },
     ],
