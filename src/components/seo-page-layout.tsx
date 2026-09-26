@@ -59,7 +59,7 @@ export function SeoPageLayout({
               href="https://www.linkedin.com/company/splitvideo/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 rounded-md border border-border/60 bg-foreground/5 px-2.5 py-1 text-xs font-medium text-muted transition-colors hover:border-border hover:bg-foreground/10 hover:text-foreground"
+              className="inline-flex w-fit shrink-0 items-center gap-1.5 self-start rounded-md border border-border/60 bg-foreground/5 px-2 py-0.5 text-xs font-medium text-muted transition-colors hover:border-border hover:bg-foreground/10 hover:text-foreground"
               aria-label="SplitVideo on LinkedIn"
             >
               <svg
