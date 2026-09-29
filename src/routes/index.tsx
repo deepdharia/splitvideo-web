@@ -146,6 +146,34 @@ function Home() {
       <SplitterApp />
 
       <section
+        aria-labelledby="studio-promo-title"
+        className="mx-auto w-full max-w-5xl px-4 pb-6"
+      >
+        <div className="glass rounded-3xl p-6 sm:p-8">
+          <p className="text-xs font-medium uppercase tracking-[0.18em] text-muted">
+            New — Shorts Studio
+          </p>
+          <h2
+            id="studio-promo-title"
+            className="mt-2 text-2xl font-semibold sm:text-3xl"
+          >
+            Turn long videos into vertical 9:16 clips for Shorts, Reels & TikTok
+          </h2>
+          <p className="mt-3 max-w-3xl text-sm leading-6 text-muted sm:text-base">
+            One-tap 15/30/60/90-second presets, true 1080×1920 vertical
+            re-encode, custom cut points on a timeline, batch ZIP download —
+            free, no watermark, on-device.
+          </p>
+          <Link
+            to="/studio"
+            className="mt-4 inline-flex rounded-md bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground"
+          >
+            Open the Shorts Studio →
+          </Link>
+        </div>
+      </section>
+
+      <section
         id="how-it-works"
         className="mx-auto w-full max-w-5xl px-4 pb-6"
         aria-labelledby="how-it-works-title"
@@ -407,6 +435,31 @@ function Home() {
           </h2>
           <ul className="mt-5 grid gap-3 sm:grid-cols-2">
             <li>
+              <Link to="/studio" className="text-sm font-medium text-accent hover:underline">
+                Shorts Studio — vertical 9:16 clips
+              </Link>
+            </li>
+            <li>
+              <Link to="/free-video-splitter-no-watermark" className="text-sm font-medium text-accent hover:underline">
+                Free video splitter — no watermark
+              </Link>
+            </li>
+            <li>
+              <Link to="/split-video-for-youtube-shorts" className="text-sm font-medium text-accent hover:underline">
+                Split video for YouTube Shorts
+              </Link>
+            </li>
+            <li>
+              <Link to="/split-video-for-instagram-reels" className="text-sm font-medium text-accent hover:underline">
+                Split video for Instagram Reels
+              </Link>
+            </li>
+            <li>
+              <Link to="/split-video-for-whatsapp-status" className="text-sm font-medium text-accent hover:underline">
+                Split video for WhatsApp Status
+              </Link>
+            </li>
+            <li>
               <Link to="/split-video-online" className="text-sm font-medium text-accent hover:underline">
                 Split video online
               </Link>
@@ -489,6 +542,9 @@ function Home() {
               </Link>
               <Link to="/video-splitter-faq" className="hover:text-foreground">
                 FAQ
+              </Link>
+              <Link to="/studio" className="hover:text-foreground">
+                Shorts Studio
               </Link>
             </div>
           </nav>

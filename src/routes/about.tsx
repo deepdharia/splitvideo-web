@@ -63,6 +63,18 @@ function Page() {
         for more detail.
       </p>
 
+      <h2 className="text-xl font-semibold text-foreground">Who builds it</h2>
+      <p>
+        SplitVideo.in is built and maintained by Deep, an independent maker
+        focused on fast, private browser tools for creators. The newest
+        addition is the{" "}
+        <Link to="/studio" className="text-accent hover:underline">
+          Shorts Studio
+        </Link>
+        , which turns long recordings into vertical 9:16 clips ready for
+        Shorts, Reels, and TikTok.
+      </p>
+
       <h2 className="text-xl font-semibold text-foreground">Contact</h2>
       <p>
         Questions, feedback, or issues can be sent to{" "}

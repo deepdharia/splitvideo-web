@@ -523,7 +523,7 @@ function DropZone({
       </span>
       <div className="max-w-md space-y-2">
         <h1 className="font-display text-3xl font-semibold tracking-tight sm:text-4xl">
-          Split a video on this phone
+          Split Video Online — Free, On-Device, No Watermark
         </h1>
         <p className="text-muted">
           Drop a file here, or tap to choose from Photos or Files. Processing stays on-device — it is not uploaded.
