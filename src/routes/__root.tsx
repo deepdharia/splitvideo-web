@@ -34,7 +34,6 @@ export const Route = createRootRoute({
       },
     ],
     links: [
-      { rel: "canonical", href: "https://www.splitvideo.in/" },
       // SplitVideo brand mark — same icon on every page
       { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
       { rel: "apple-touch-icon", href: "/favicon.svg" },

@@ -41,6 +41,8 @@ function Page() {
         </p>
       </div>
 
+      <h2 className="text-xl font-semibold text-foreground">Reporting a processing problem</h2>
+      <p>Include your device, browser version, file type, approximate size and duration, selected split mode, and the exact error message. Tell us whether the original plays in your browser and whether a short sample works. Do not email private recordings; a description is enough to start investigating.</p>
       <h2 className="text-xl font-semibold text-foreground">Response time</h2>
       <p>
         We aim to reply within a few days. For the fastest help with using the
