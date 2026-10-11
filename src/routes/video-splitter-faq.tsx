@@ -18,7 +18,11 @@ function Page() {
   return (
     <SeoPageLayout title="Video splitter FAQ">
       <p className="text-foreground">Straightforward answers about how SplitVideo works, privacy, equal parts, time splits, quality, and mobile use.</p>
-      <div className="space-y-6">
+      <div className="space-y-6">        <article className="glass rounded-2xl p-5"><h2 className="text-lg font-semibold text-foreground">The export starts before my cut. Is that a bug?</h2><p className="mt-2">Lossless splitting can move the start to an earlier keyframe so the clip can decode correctly. The spacing of keyframes is set by the source recording. Check actual output durations when a platform has a strict limit; do not assume every lossless cut will be frame-exact.</p></article>
+        <article className="glass rounded-2xl p-5"><h2 className="text-lg font-semibold text-foreground">My file is MP4 but will not open. What should I check?</h2><p className="mt-2">MP4 describes the container, not the video codec inside it. Try playing the original in the same browser first. If it cannot play, try another up-to-date browser or export a compatible copy from your recording app. Keep the original. Renaming a file extension does not convert its codec.</p></article>
+        <article className="glass rounded-2xl p-5"><h2 className="text-lg font-semibold text-foreground">Why does a large recording stop processing?</h2><p className="mt-2">Browser memory, available storage, codec support, and device resources all affect processing. Close unused tabs, keep this tab in the foreground, and try a shorter recording. A file-size promise alone cannot guarantee success on every phone. Refreshing the page discards the current in-memory session, so save completed clips first.</p></article>
+        <article className="glass rounded-2xl p-5"><h2 className="text-lg font-semibold text-foreground">Where did my download go?</h2><p className="mt-2">Check your browser’s downloads list and your device’s Downloads folder. A video saved as a file may not appear automatically in Photos. On mobile, open the saved clip and use the available share or save options. Before leaving the page, verify that the saved file plays outside the splitter.</p></article>
+
         <article className="glass rounded-2xl p-5">
           <h2 className="text-lg font-semibold text-foreground">Is my video uploaded?</h2>
           <p className="mt-2">No. The selected file is processed in the browser on your device. There is no server-side encode step for the original video.</p>
