@@ -28,6 +28,23 @@ export function SeoPageLayout({
             <p className="text-xs text-muted">splitvideo.in</p>
           </div>
         </Link>
+        <nav aria-label="Main" className="hidden items-center gap-4 text-sm text-muted md:flex">
+          <Link to="/how-to-split-a-video" className="hover:text-foreground">
+            Guide
+          </Link>
+          <Link to="/split-video-on-phone" className="hover:text-foreground">
+            Phone
+          </Link>
+          <Link to="/split-large-video-files" className="hover:text-foreground">
+            Large files
+          </Link>
+          <Link to="/video-splitter-faq" className="hover:text-foreground">
+            FAQ
+          </Link>
+          <Link to="/about" className="hover:text-foreground">
+            About
+          </Link>
+        </nav>
         <Link
           to="/"
           className="glass-btn rounded-md px-3 py-2 text-sm font-medium"
@@ -75,6 +92,12 @@ export function SeoPageLayout({
           <nav aria-label="Footer links" className="flex flex-wrap gap-x-4 gap-y-2">
             <Link to="/" className="hover:text-foreground">
               Tool
+            </Link>
+            <Link to="/how-to-split-a-video" className="hover:text-foreground">
+              Guide
+            </Link>
+            <Link to="/video-splitter-troubleshooting" className="hover:text-foreground">
+              Troubleshooting
             </Link>
             <Link to="/about" className="hover:text-foreground">
               About

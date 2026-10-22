@@ -16,7 +16,7 @@ const FAQ = [
   },
   {
     q: "Will the clips keep their original quality?",
-    a: "Yes, by default. The lossless mode copies the original video stream without re-encoding, so quality is identical to the source. If you enable the optional H.264 mode, the video is re-encoded at the quality level you choose.",
+    a: "Yes, by default. The lossless mode copies the original video stream without re-encoding, so quality is identical to the source. If you enable the optional H.264 mode, the video is re-encoded, which can slightly change quality in exchange for wider compatibility.",
   },
 ];
 
@@ -114,7 +114,7 @@ function Page() {
         </li>
         <li>
           <strong className="text-foreground">Custom cut points</strong> — drop
-          markers on a visual timeline for exact highlights.
+          markers on a visual timeline to cut at the moments you choose.
         </li>
         <li>
           <strong className="text-foreground">Lossless by default</strong> —
@@ -172,6 +172,43 @@ function Page() {
         </Link>{" "}
         cuts the same recording into short clips with Every N sec intervals —
         also free, also watermark-free.
+      </p>
+
+      <h2 className="text-xl font-semibold text-foreground">
+        How to spot a "free" tool that will watermark you
+      </h2>
+      <p>
+        Before uploading a video anywhere, three quick checks predict
+        whether the export will come back stamped:
+      </p>
+      <ul className="list-disc space-y-2 pl-5">
+        <li>
+          <strong className="text-foreground">It asks for an upload and an account.</strong>{" "}
+          Server processing costs the tool money; the watermark — or the
+          plan that removes it — is how that cost comes back.
+        </li>
+        <li>
+          <strong className="text-foreground">The pricing page lists "No watermark" as a paid feature.</strong>{" "}
+          If removing the stamp is a bullet point on the Pro tier, the free
+          tier has the stamp.
+        </li>
+        <li>
+          <strong className="text-foreground">Your test export has a "Made with" outro.</strong>{" "}
+          Some tools add it only to the last seconds — always watch a test
+          clip to the end before trusting a tool with a real project.
+        </li>
+      </ul>
+      <p>
+        SplitVideo's position is simple and checkable: there is no upload,
+        no account, and no pricing page, because the processing happens on
+        your device. What "free" does not mean here is unlimited in every
+        dimension — one run creates up to 24 clips, and the biggest files
+        are bounded by your device's memory, as the{" "}
+        <Link to="/split-large-video-files" className="text-accent hover:underline">
+          large files guide
+        </Link>{" "}
+        documents with a real 15 GB example. Those are physics, not
+        paywalls.
       </p>
 
       <h2 className="text-xl font-semibold text-foreground">FAQ</h2>

@@ -138,10 +138,48 @@ function Page() {
         </li>
         <li>
           <strong className="text-foreground">Gameplay-ready:</strong> built for
-          long gaming sessions — split a 2-hour stream into Shorts while you
-          make chai.
+          long gaming sessions — split a stream recording into Shorts in
+          batches of up to 24 clips, range by range.
         </li>
       </ul>
+
+      <h2 className="text-xl font-semibold text-foreground">
+        From one recording to a week of Shorts
+      </h2>
+      <p>
+        The workflow this tool was built for looks like this. A creator
+        records one long session — say 34 minutes of gameplay. Split into
+        equal parts, that is 24 clips of about 85 seconds; with cut points
+        instead, it is however many real moments the session contained. Post
+        the strongest clip today, and the batch carries the channel for days:
+        one recording session, a week of uploads, no evening spent scrubbing
+        a timeline in a heavy editor. The full real-world example — file
+        size, specs, and screenshots — is written up in the{" "}
+        <Link to="/split-large-video-files" className="text-accent hover:underline">
+          large video files case study
+        </Link>
+        .
+      </p>
+
+      <h2 className="text-xl font-semibold text-foreground">
+        Intervals or cut points for Shorts?
+      </h2>
+      <p>
+        Use <strong className="text-foreground">intervals</strong> when the
+        recording is uniformly watchable — a steady tutorial, a vlog, a
+        match played end to end. Use{" "}
+        <strong className="text-foreground">cut points</strong> when the
+        value is in moments: a Short lives or dies in its first two seconds,
+        and an interval boundary does not know where your best moment starts.
+        Many creators do both — cut points for the three or four real
+        highlights, then an interval pass over the remainder for filler
+        clips. Either way, each Short should contain one moment, not half of
+        two. For the mechanics of each mode, see{" "}
+        <Link to="/how-to-split-a-video" className="text-accent hover:underline">
+          how to split a video
+        </Link>
+        .
+      </p>
 
       <h2 className="text-xl font-semibold text-foreground">
         Horizontal recording? Split first, then crop

@@ -151,6 +151,41 @@ function Page() {
         watermark-free and full-quality, they look native, not recycled.
       </p>
 
+      <h2 className="text-xl font-semibold text-foreground">
+        A worked example: a 10-minute vlog
+      </h2>
+      <p>
+        Ten minutes at a 30-second interval is twenty clips — inside the
+        24-per-run limit, so it is a single split and one ZIP download. In
+        practice you will not post all twenty. Watch the batch once, keep
+        the six with a real moment in them, and let the rest go. That
+        ratio — record long, split everything, publish the best third — is
+        how a single weekly recording session turns into a daily posting
+        habit without daily recording. Longer source? A 40-minute video
+        needs two runs of twenty minutes each; the{" "}
+        <Link to="/how-to-split-a-video" className="text-accent hover:underline">
+          how-to guide
+        </Link>{" "}
+        covers the range trick for that.
+      </p>
+
+      <h2 className="text-xl font-semibold text-foreground">
+        Two details that decide how a Reel lands
+      </h2>
+      <p>
+        <strong className="text-foreground">The first frame is the cover.</strong>{" "}
+        Instagram picks your opening frame as the thumbnail in the grid, so
+        a clip that starts mid-blink or mid-pan starts at a disadvantage.
+        Cut points placed a breath before the moment beat interval
+        boundaries here.{" "}
+        <strong className="text-foreground">Audio travels with the clip.</strong>{" "}
+        Your recording's original sound is copied into every part unchanged.
+        If you plan to use a trending track, add it inside Instagram when
+        posting — keep your split's audio as-is and let the app layer the
+        music, so the same clip can be reposted later with a different
+        track.
+      </p>
+
       <h2 className="text-xl font-semibold text-foreground">FAQ</h2>
       <div className="space-y-4">
         {FAQ.map((f) => (
