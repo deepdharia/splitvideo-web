@@ -4,15 +4,15 @@ import { SeoPageLayout } from "@/components/seo-page-layout";
 const FAQ = [
   {
     q: "What length should YouTube Shorts clips be?",
-    a: "YouTube Shorts can be up to 3 minutes long, but clips between 15 and 60 seconds tend to hold attention best. The Shorts Studio has one-tap 15s, 30s, 60s, and 90s presets so you can slice a long video to the right length instantly.",
+    a: "YouTube Shorts can be up to 3 minutes long, but clips between 15 and 60 seconds tend to hold attention best. Use Every N sec in the splitter with a 15s, 30s, 60s, or 90s interval to slice a long video to the right length in one run.",
   },
   {
     q: "What video size do YouTube Shorts need?",
-    a: "Shorts are vertical: 1080×1920 pixels (9:16 aspect ratio). If your recording is horizontal, use the studio's 9:16 Crop for full-screen vertical or 9:16 Blur BG for the blurred-fill style — both re-encode to true 1080×1920.",
+    a: "Shorts are vertical 1080×1920 (9:16). SplitVideo splits the timeline and keeps your recording's original frame — it does not crop horizontal footage to vertical. Record vertically and clips are Shorts-ready as exported; for horizontal recordings, split first, then crop to 9:16 in your editing app.",
   },
   {
     q: "Can I split a long video into multiple Shorts at once?",
-    a: "Yes. Drop in a long recording, choose the Every X sec mode with a 30s or 60s preset, and the studio renders every clip in one batch. Download them individually or as a single ZIP.",
+    a: "Yes. Drop in a long recording, choose Every N sec with a 15s, 30s, or 60s interval, and SplitVideo creates every clip in one batch — up to 24 clips per run. Download them individually or as a single ZIP.",
   },
 ];
 
@@ -21,12 +21,12 @@ export const Route = createFileRoute("/split-video-for-youtube-shorts")({
     meta: [
       {
         title:
-          "Split Video for YouTube Shorts — Free 9:16 Clip Maker | SplitVideo",
+          "Split Video for YouTube Shorts — Free Clip Maker | SplitVideo",
       },
       {
         name: "description",
         content:
-          "Turn long videos into YouTube Shorts free. One-tap 15/30/60/90s presets, true 9:16 vertical re-encode, no watermark, no upload. Split a recording into ready-to-post Shorts in your browser.",
+          "Turn a long recording into multiple YouTube Shorts-length clips with SplitVideo's free on-device splitter.",
       },
       {
         property: "og:title",
@@ -35,7 +35,7 @@ export const Route = createFileRoute("/split-video-for-youtube-shorts")({
       {
         property: "og:description",
         content:
-          "Long video in, vertical Shorts out. Free 9:16 clip maker — no watermark, on-device.",
+          "Long video in, Shorts-length clips out. Free on-device splitter — no watermark, no upload.",
       },
       {
         property: "og:url",
@@ -64,27 +64,27 @@ export const Route = createFileRoute("/split-video-for-youtube-shorts")({
               "@type": "HowTo",
               name: "How to split a video into YouTube Shorts",
               description:
-                "Turn a long horizontal or vertical recording into multiple 9:16 YouTube Shorts clips using SplitVideo's free Shorts Studio.",
+                "Turn a long recording into multiple YouTube Shorts-length clips using SplitVideo's free on-device splitter.",
               step: [
                 {
                   "@type": "HowToStep",
-                  name: "Open the Shorts Studio and add your video",
-                  text: "Drop an MP4, MOV, WebM, or MKV file into the studio. It opens in your browser with no upload.",
+                  name: "Open SplitVideo and add your video",
+                  text: "Drop an MP4, MOV, WebM, or MKV file into the splitter. It opens in your browser with no upload.",
                 },
                 {
                   "@type": "HowToStep",
                   name: "Choose a Shorts-friendly length",
-                  text: "Tap a 15s, 30s, 60s, or 90s preset in Every X sec mode, or place custom cut points on the timeline.",
+                  text: "Use Every N sec with a 15s, 30s, 60s, or 90s interval, or place custom cut points on the timeline.",
                 },
                 {
                   "@type": "HowToStep",
-                  name: "Pick the 9:16 vertical format",
-                  text: "Choose 9:16 Crop for full-screen vertical or 9:16 Blur BG for the blurred-fill look. Clips re-encode to 1080×1920.",
+                  name: "Check your frame",
+                  text: "SplitVideo keeps your recording's original frame and does not crop. Vertical recordings are Shorts-ready as exported; for horizontal recordings, crop the clips to 9:16 in your editing app after splitting.",
                 },
                 {
                   "@type": "HowToStep",
                   name: "Split and download",
-                  text: "Render all clips in one batch and download them individually or as a ZIP — watermark-free and ready to upload as Shorts.",
+                  text: "Split all clips in one batch and download them individually or as a ZIP — watermark-free and ready to upload as Shorts.",
                 },
               ],
             },
@@ -110,11 +110,11 @@ function Page() {
       <p className="text-foreground">
         The fastest way to turn one long recording into a week of YouTube
         Shorts: SplitVideo's{" "}
-        <Link to="/studio" className="text-accent hover:underline">
-          Shorts Studio
+        <Link to="/" className="text-accent hover:underline">
+          video splitter
         </Link>{" "}
-        slices your video into vertical 9:16 clips at Shorts-friendly lengths —
-        free, no watermark, and everything happens on your device.
+        slices your video into clips at Shorts-friendly lengths — free, no
+        watermark, and everything happens on your device.
       </p>
 
       <h2 className="text-xl font-semibold text-foreground">
@@ -122,17 +122,19 @@ function Page() {
       </h2>
       <ul className="list-disc space-y-2 pl-5">
         <li>
-          <strong className="text-foreground">One-tap presets:</strong> 15s,
-          30s, 60s, and 90s — the lengths that work best as Shorts.
+          <strong className="text-foreground">Interval splitting:</strong>{" "}
+          Every N sec at 15s, 30s, 60s, or 90s — the lengths that work best
+          as Shorts.
         </li>
         <li>
-          <strong className="text-foreground">True 9:16 output:</strong>{" "}
-          hardware-accelerated re-encode to 1080×1920, not a stretched fake.
+          <strong className="text-foreground">Original frame kept:</strong>{" "}
+          clips keep your recording's frame and source quality — vertical
+          recordings are Shorts-ready as exported.
         </li>
         <li>
           <strong className="text-foreground">Batch everything:</strong> a
-          10-minute recording becomes twenty 30-second Shorts in one run, with
-          a single ZIP download.
+          10-minute recording becomes twenty 30-second clips in one run (up
+          to 24 clips per run), with a single ZIP download.
         </li>
         <li>
           <strong className="text-foreground">Gameplay-ready:</strong> built for
@@ -142,16 +144,15 @@ function Page() {
       </ul>
 
       <h2 className="text-xl font-semibold text-foreground">
-        Horizontal recording? Two good options
+        Horizontal recording? Split first, then crop
       </h2>
       <p>
-        <strong className="text-foreground">9:16 Crop</strong> zooms into the
-        center of the frame — best when the action stays middle-screen (talking
-        head, centered gameplay).{" "}
-        <strong className="text-foreground">9:16 Blur BG</strong> keeps the full
-        horizontal frame visible and fills the top and bottom with a blurred
-        copy — best for wide gameplay or screen recordings where cropping would
-        cut off UI.
+        SplitVideo splits the timeline and keeps your recording's original
+        frame — it does not crop horizontal footage to vertical. For
+        horizontal gameplay or screen recordings, split into clips here
+        first, then crop to 9:16 in your editing app (most editors have a
+        one-tap vertical crop). If you record vertically, your clips are
+        Shorts-ready straight from the splitter.
       </p>
 
       <h2 className="text-xl font-semibold text-foreground">FAQ</h2>
@@ -166,10 +167,10 @@ function Page() {
 
       <p className="pt-2">
         <Link
-          to="/studio"
+          to="/"
           className="inline-flex rounded-md bg-primary px-4 py-2.5 text-sm font-medium text-primary-foreground"
         >
-          Make Shorts from your video — free
+          Open the video splitter
         </Link>
       </p>
     </SeoPageLayout>
