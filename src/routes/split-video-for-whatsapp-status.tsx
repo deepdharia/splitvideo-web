@@ -8,11 +8,11 @@ const FAQ = [
   },
   {
     q: "How do I split a long video for WhatsApp Status?",
-    a: "Open SplitVideo's Shorts Studio, drop in your video, and use the Every X sec mode with the 90s preset (or 30s/60s for shorter updates). Split once, download all parts, and share them to your status in order.",
+    a: "Open SplitVideo, drop in your video, and use Every N sec with a 90-second interval (or 30s/60s for shorter updates). Split once, download all parts, and share them to your status in order.",
   },
   {
     q: "Will the video quality drop when I share to WhatsApp?",
-    a: "WhatsApp compresses status videos. Starting from a clean, high-quality split — use the High quality 9:16 setting — gives you the best possible result after WhatsApp's compression.",
+    a: "WhatsApp compresses status videos. SplitVideo's default mode copies the original video stream without re-encoding, so starting from a clean, full-quality split gives you the best possible result after WhatsApp's compression.",
   },
 ];
 
@@ -26,7 +26,7 @@ export const Route = createFileRoute("/split-video-for-whatsapp-status")({
       {
         name: "description",
         content:
-          "Split long videos for WhatsApp Status free. 90-second parts, vertical 9:16 format, no watermark, no upload. Turn any recording into a multi-part status series in your browser.",
+          "Split long videos for WhatsApp Status free. 90-second parts, no watermark, no upload. Turn any recording into a multi-part status series in your browser.",
       },
       {
         property: "og:title",
@@ -69,17 +69,17 @@ export const Route = createFileRoute("/split-video-for-whatsapp-status")({
                 {
                   "@type": "HowToStep",
                   name: "Add your video",
-                  text: "Drop your MP4, MOV, or WebM into the Shorts Studio. It opens in your browser with no upload.",
+                  text: "Drop your MP4, MOV, or WebM into the splitter. It opens in your browser with no upload.",
                 },
                 {
                   "@type": "HowToStep",
                   name: "Split into 90-second parts",
-                  text: "Use Every X sec mode with the 90s preset so each part fits the WhatsApp Status limit.",
+                  text: "Use Every N sec with a 90-second interval so each part fits the WhatsApp Status limit.",
                 },
                 {
                   "@type": "HowToStep",
-                  name: "Choose vertical 9:16",
-                  text: "Pick 9:16 Crop or Blur BG so each part fills the phone screen as a status.",
+                  name: "Keep the full story",
+                  text: "Splitting first means no part is trimmed away — every section of your video survives as its own status, in your recording's original frame.",
                 },
                 {
                   "@type": "HowToStep",
@@ -110,8 +110,8 @@ function Page() {
       <p className="text-foreground">
         WhatsApp cuts Status videos off at 90 seconds — so a 5-minute recording
         needs splitting first. SplitVideo's{" "}
-        <Link to="/studio" className="text-accent hover:underline">
-          Shorts Studio
+        <Link to="/" className="text-accent hover:underline">
+          free video splitter
         </Link>{" "}
         divides any video into 90-second, status-ready parts in one go: free,
         no watermark, right in your browser.
@@ -133,18 +133,18 @@ function Page() {
       <ol className="list-decimal space-y-2 pl-5">
         <li>
           Open the{" "}
-          <Link to="/studio" className="text-accent hover:underline">
-            Shorts Studio
+          <Link to="/" className="text-accent hover:underline">
+            free video splitter
           </Link>{" "}
           and drop in your video.
         </li>
         <li>
-          Choose <em>Every X sec</em> mode and tap the{" "}
-          <strong className="text-foreground">90s</strong> preset (use 30s or
-          60s for punchier updates).
+          Choose <em>Every N sec</em> mode and set a{" "}
+          <strong className="text-foreground">90-second</strong> interval (use
+          30s or 60s for punchier updates).
         </li>
         <li>
-          Pick <em>9:16</em> so each part fills the phone screen vertically.
+          Download all parts — individually or as one ZIP.
         </li>
         <li>
           Split, download the parts, and post them to your Status in order.
@@ -173,10 +173,10 @@ function Page() {
 
       <p className="pt-2">
         <Link
-          to="/studio"
+          to="/"
           className="inline-flex rounded-md bg-primary px-4 py-2.5 text-sm font-medium text-primary-foreground"
         >
-          Split for WhatsApp Status — free
+          Open the video splitter
         </Link>
       </p>
     </SeoPageLayout>

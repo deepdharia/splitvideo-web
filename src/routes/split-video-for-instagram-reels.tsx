@@ -4,15 +4,15 @@ import { SeoPageLayout } from "@/components/seo-page-layout";
 const FAQ = [
   {
     q: "What size should Instagram Reels clips be?",
-    a: "Reels are 1080×1920 (9:16). Recordings up to 3 minutes are supported. The Shorts Studio re-encodes your clips to true 1080×1920 with 9:16 Crop or 9:16 Blur BG, so horizontal footage becomes Reel-ready.",
+    a: "Reels are 1080×1920 (9:16), up to 3 minutes. SplitVideo keeps your recording's original frame — it splits the timeline without cropping. Vertical recordings export Reel-ready; for horizontal footage, split into clips here, then crop to 9:16 in your editor.",
   },
   {
     q: "How do I split a video into parts for Instagram Reels?",
-    a: "Open the Shorts Studio, drop in your video, and use the Every X sec mode with a 15s, 30s, or 60s preset — or place custom cut points for highlights. Split once, download all clips as a ZIP, and upload them as a Reels series.",
+    a: "Open SplitVideo, drop in your video, and use Every N sec with a 15s, 30s, or 60s interval — or place custom cut points for highlights. Split once, download all clips as a ZIP, and post them as a Reels series.",
   },
   {
     q: "Will Instagram compress my clips?",
-    a: "Instagram always re-compresses uploads, so starting from the highest quality helps. Use the High quality setting in the studio's 9:16 mode to give Instagram the cleanest possible source file.",
+    a: "Instagram re-compresses uploads, so starting from the highest quality helps. SplitVideo's default mode copies the original video stream without re-encoding, so your clips keep the exact source quality.",
   },
 ];
 
@@ -21,12 +21,12 @@ export const Route = createFileRoute("/split-video-for-instagram-reels")({
     meta: [
       {
         title:
-          "Split Video for Instagram Reels — Free 9:16 Reel Maker | SplitVideo",
+          "Split Video for Instagram Reels — Free Clip Maker | SplitVideo",
       },
       {
         name: "description",
         content:
-          "Split videos into Instagram Reels free. True 9:16 vertical re-encode, 15/30/60/90s presets, custom cut points, batch ZIP download. No watermark, no upload — 100% on-device.",
+          "Split videos into Instagram Reels-length clips free. Every N sec intervals, custom cut points, batch ZIP download, up to 24 clips per run. No watermark, no upload — 100% on-device.",
       },
       {
         property: "og:title",
@@ -35,7 +35,7 @@ export const Route = createFileRoute("/split-video-for-instagram-reels")({
       {
         property: "og:description",
         content:
-          "Turn long videos into Reel-ready 9:16 clips. Free, no watermark, on-device.",
+          "Turn long videos into Reel-length clips. Free, no watermark, on-device.",
       },
       {
         property: "og:url",
@@ -64,22 +64,22 @@ export const Route = createFileRoute("/split-video-for-instagram-reels")({
               "@type": "HowTo",
               name: "How to split a video into Instagram Reels",
               description:
-                "Turn a long recording into multiple 9:16 Instagram Reels clips with SplitVideo's free Shorts Studio.",
+                "Turn a long recording into multiple Instagram Reels-length clips with SplitVideo's free on-device splitter.",
               step: [
                 {
                   "@type": "HowToStep",
-                  name: "Add your video to the Shorts Studio",
-                  text: "Drop an MP4, MOV, WebM, or MKV into the studio. It loads in your browser — nothing is uploaded.",
+                  name: "Add your video to SplitVideo",
+                  text: "Drop an MP4, MOV, WebM, or MKV into the splitter. It loads in your browser — nothing is uploaded.",
                 },
                 {
                   "@type": "HowToStep",
                   name: "Slice it into Reel lengths",
-                  text: "Use Every X sec with 15s/30s/60s presets, or drop custom cut points on the timeline for highlights.",
+                  text: "Use Every N sec with a 15s, 30s, or 60s interval, or drop custom cut points on the timeline for highlights.",
                 },
                 {
                   "@type": "HowToStep",
-                  name: "Go vertical 9:16",
-                  text: "Pick 9:16 Crop or 9:16 Blur BG. Clips render at 1080×1920 — the exact Reels size.",
+                  name: "Check the frame",
+                  text: "SplitVideo keeps your recording's original frame. Vertical recordings are Reel-ready as exported; crop horizontal clips to 9:16 in your editor after splitting.",
                 },
                 {
                   "@type": "HowToStep",
@@ -109,11 +109,11 @@ function Page() {
     <SeoPageLayout title="Split Video for Instagram Reels">
       <p className="text-foreground">
         One recording, a week of Reels. SplitVideo's{" "}
-        <Link to="/studio" className="text-accent hover:underline">
-          Shorts Studio
+        <Link to="/" className="text-accent hover:underline">
+          video splitter
         </Link>{" "}
-        cuts your long video into vertical 9:16 clips sized exactly for
-        Instagram Reels — free, watermark-free, and processed on your device.
+        cuts your long video into Reels-length clips — free, watermark-free,
+        and processed on your device.
       </p>
 
       <h2 className="text-xl font-semibold text-foreground">
@@ -121,12 +121,14 @@ function Page() {
       </h2>
       <ul className="list-disc space-y-2 pl-5">
         <li>
-          <strong className="text-foreground">Reel-length presets:</strong>{" "}
-          15s, 30s, 60s, 90s — tap once, get a full batch of clips.
+          <strong className="text-foreground">Reel-length intervals:</strong>{" "}
+          Every N sec at 15s, 30s, 60s, or 90s — one run, a full batch of
+          clips.
         </li>
         <li>
-          <strong className="text-foreground">Exact 9:16 output:</strong>{" "}
-          1080×1920 H.264, the native Reels format. No black bars, no stretch.
+          <strong className="text-foreground">Original frame kept:</strong>{" "}
+          no forced crop or stretch — vertical recordings post as-is, and
+          horizontal clips crop cleanly in your editor.
         </li>
         <li>
           <strong className="text-foreground">Highlight cuts:</strong> drop
@@ -144,7 +146,7 @@ function Page() {
       </h2>
       <p>
         Record once — a vlog, a gameplay session, a tutorial. Split it into
-        30-second vertical clips. Post the strongest moment first, then release
+        30-second clips. Post the strongest moment first, then release
         the rest as a series with "part 2" hooks. Because every clip is
         watermark-free and full-quality, they look native, not recycled.
       </p>
@@ -161,10 +163,10 @@ function Page() {
 
       <p className="pt-2">
         <Link
-          to="/studio"
+          to="/"
           className="inline-flex rounded-md bg-primary px-4 py-2.5 text-sm font-medium text-primary-foreground"
         >
-          Make Reels from your video — free
+          Open the video splitter
         </Link>
       </p>
     </SeoPageLayout>

@@ -4,7 +4,7 @@ import { SeoPageLayout } from "@/components/seo-page-layout";
 const FAQ = [
   {
     q: "Is SplitVideo really free with no watermark?",
-    a: "Yes. Every clip you export — in the main splitter and in the Shorts Studio — downloads without any watermark, logo, or branding burned into the video. There are no export limits forcing an upgrade.",
+    a: "Yes. Every clip you export downloads without any watermark, logo, or branding burned into the video. There are no export limits forcing an upgrade.",
   },
   {
     q: "Do I need to create an account to remove the watermark?",
@@ -16,7 +16,7 @@ const FAQ = [
   },
   {
     q: "Will the clips keep their original quality?",
-    a: "Yes, by default. The lossless mode copies the original video stream without re-encoding, so quality is identical to the source. If you choose a 9:16 or 1:1 format in the Shorts Studio, the video is re-encoded with H.264 at your chosen quality level.",
+    a: "Yes, by default. The lossless mode copies the original video stream without re-encoding, so quality is identical to the source. If you enable the optional H.264 mode, the video is re-encoded at the quality level you choose.",
   },
 ];
 
@@ -30,7 +30,7 @@ export const Route = createFileRoute("/free-video-splitter-no-watermark")({
       {
         name: "description",
         content:
-          "Split videos online free with no watermark. Equal parts, time-based clips, custom cut points, and a vertical Shorts Studio — all on-device, no upload, no account needed.",
+          "Split videos online free with no watermark. Equal parts, time-based clips, custom cut points — all on-device, no upload, no account needed.",
       },
       {
         property: "og:title",
@@ -70,7 +70,7 @@ export const Route = createFileRoute("/free-video-splitter-no-watermark")({
               name: "SplitVideo — Free Video Splitter, No Watermark",
               url: "https://www.splitvideo.in/free-video-splitter-no-watermark",
               description:
-                "Free online video splitter with no watermark. Split videos into equal parts, by time, or at custom cut points. Optional Shorts Studio for vertical 9:16 clips. On-device processing, no upload, no account.",
+                "Free online video splitter with no watermark. Split videos into equal parts, by time, or at custom cut points. On-device processing, no upload, no account.",
               applicationCategory: "MultimediaApplication",
               operatingSystem: "Any (modern browser)",
               offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
@@ -117,9 +117,9 @@ function Page() {
           markers on a visual timeline for exact highlights.
         </li>
         <li>
-          <strong className="text-foreground">Shorts Studio</strong> — turn
-          landscape footage into vertical 9:16 clips for Shorts, Reels, and
-          TikTok with one-tap presets.
+          <strong className="text-foreground">Lossless by default</strong> —
+          the default mode copies the original video stream instead of
+          re-encoding it, so every clip keeps the exact source quality.
         </li>
         <li>
           <strong className="text-foreground">Batch ZIP download</strong> — grab
@@ -140,9 +140,9 @@ function Page() {
       </p>
       <p>
         The trade-off is honest: very large files are limited by your device's
-        own memory rather than an artificial paywall, and the optional 9:16 /
-        1:1 re-encodes take a little time because your phone or laptop is doing
-        the rendering work locally.
+        own memory rather than an artificial paywall, and exports happen at
+        the speed of your phone or laptop because it is doing the work
+        locally.
       </p>
 
       <h2 className="text-xl font-semibold text-foreground">
@@ -166,12 +166,12 @@ function Page() {
         </li>
       </ol>
       <p>
-        Making content for vertical platforms? The{" "}
-        <Link to="/studio" className="text-accent hover:underline">
-          Shorts Studio
+        Posting to Shorts, Reels, or TikTok? The{" "}
+        <Link to="/" className="text-accent hover:underline">
+          free video splitter
         </Link>{" "}
-        converts the same video into 9:16 clips with 15/30/60/90-second
-        presets — also free, also watermark-free.
+        cuts the same recording into short clips with Every N sec intervals —
+        also free, also watermark-free.
       </p>
 
       <h2 className="text-xl font-semibold text-foreground">FAQ</h2>
