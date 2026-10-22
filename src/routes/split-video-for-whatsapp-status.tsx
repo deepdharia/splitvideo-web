@@ -144,12 +144,44 @@ function Page() {
           30s or 60s for punchier updates).
         </li>
         <li>
-          Download all parts — individually or as one ZIP.
+          Press <strong className="text-foreground">Split video</strong>, then
+          download all parts — individually or as one ZIP.
         </li>
         <li>
-          Split, download the parts, and post them to your Status in order.
+          Post the parts to your Status in order — they are named in
+          sequence, so they line up correctly in your gallery.
         </li>
       </ol>
+
+      <h2 className="text-xl font-semibold text-foreground">
+        Worked example: a 7-minute video
+      </h2>
+      <p>
+        A 7-minute recording — a school function, a short speech, a match
+        highlight reel — at a 90-second interval becomes five parts: four
+        full 90-second statuses and a final 30-second one. Post all five
+        back to back and your contacts see the complete video as a series,
+        each part under the limit, nothing trimmed away. The maths
+        generalises: minutes × 60 ÷ 90, rounded up, is your part count. One
+        SplitVideo run makes up to 24 parts, which covers a full 36 minutes
+        at 90 seconds; for anything longer, split in two ranges and post
+        both sets in order.
+      </p>
+
+      <h2 className="text-xl font-semibold text-foreground">
+        One quality truth about Status
+      </h2>
+      <p>
+        WhatsApp compresses every Status video — that happens after
+        splitting, on WhatsApp's side, and no tool can prevent it. What you
+        control is the input: because SplitVideo's default mode copies your
+        original video stream without re-encoding, WhatsApp receives the
+        cleanest possible source and its compression has good material to
+        work with. When quality matters more than the Status format — a
+        video you are sending to one person, not broadcasting — skip Status
+        and send the parts in a chat as documents instead, which avoids the
+        compression entirely.
+      </p>
 
       <h2 className="text-xl font-semibold text-foreground">
         Why not just let WhatsApp trim it?

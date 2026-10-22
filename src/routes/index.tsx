@@ -76,51 +76,6 @@ export const Route = createFileRoute("/")({
               screenshot: "https://www.splitvideo.in/og.jpg",
             },
             {
-              "@type": "FAQPage",
-              mainEntity: [
-                {
-                  "@type": "Question",
-                  name: "Is my video uploaded when I use SplitVideo?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "No. SplitVideo processes the selected video entirely in your browser on your device. The original file is never sent to a server.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "Can I split a video into equal parts?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Yes. Choose Equal parts, set how many clips you want (for example 3, 4, or 6), and export. Each part has roughly the same duration.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "Can I split a video by time or seconds?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Yes. Use Every N sec to create clips of a fixed length (for example every 15 or 30 seconds) from a longer recording.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "Does splitting reduce video quality?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "By default SplitVideo uses a lossless path that copies the original picture. If you enable the optional H.264 option, the video is re-encoded and may have a small quality change.",
-                  },
-                },
-                {
-                  "@type": "Question",
-                  name: "Does SplitVideo work on iPhone and Android?",
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: "Yes. It works in Safari on iPhone and Chrome (and other modern browsers) on Android. You pick the video from Photos or Files and save clips with the system share sheet.",
-                  },
-                },
-              ],
-            },
-            {
               "@type": "Organization",
               name: "SplitVideo",
               alternateName: "SplitVideo.in",
@@ -157,17 +112,30 @@ function Home() {
             id="proof-title"
             className="mt-2 text-2xl font-semibold sm:text-3xl"
           >
-            A 15 GB Full HD recording, split into 24 parts — right in the
-            browser
+            A 15 GB recording, split into 24 parts — right in the browser
           </h2>
           <p className="mt-3 max-w-3xl text-sm leading-6 text-muted sm:text-base">
             SplitVideo was built for exactly this job, and its creator uses it
-            on his own gameplay recordings: one 15 GB Full HD session, split
-            into 24 equal parts, fast — with nothing uploaded. The default mode
-            copies the original video stream instead of re-encoding it, so
-            every part keeps the source quality and exports finish quickly.
-            One run creates up to 24 clips; for an even longer session, split
-            it in two ranges.
+            on his own gameplay recordings: one 15.09 GB session (34 minutes,
+            2880×1800), split into 24 equal parts of about 85 seconds — fast,
+            with nothing uploaded. The default mode copies the original video
+            stream instead of re-encoding it, so every part keeps the source
+            quality and exports finish quickly. One run creates up to 24
+            clips; for an even longer session, split it in two ranges.
+          </p>
+          <img
+            src="/images/split-15gb-recording-24-clips.webp"
+            alt="Mac Finder windows showing a 15.09 GB screen recording (34 minutes, 2880 by 1800) alongside the 24 numbered MP4 parts it was split into"
+            className="mt-5 w-full rounded-2xl border border-border/60"
+            loading="lazy"
+          />
+          <p className="mt-4 text-sm">
+            <Link
+              to="/split-large-video-files"
+              className="font-medium text-accent hover:underline"
+            >
+              Read the full case study — specs, screenshots, and the big-file playbook →
+            </Link>
           </p>
         </div>
       </section>
@@ -201,7 +169,8 @@ function Home() {
                 of parts, and export the resulting clips.
               </p>
               <Link
-                to="/split-video-into-equal-parts"
+                to="/how-to-split-a-video"
+                hash="equal-parts"
                 className="mt-3 inline-block text-sm font-medium text-accent hover:underline"
               >
                 Learn more about equal parts →
@@ -215,7 +184,8 @@ function Home() {
                 only need one section of a recording.
               </p>
               <Link
-                to="/split-video-by-time"
+                to="/how-to-split-a-video"
+                hash="by-time"
                 className="mt-3 inline-block text-sm font-medium text-accent hover:underline"
               >
                 Learn more about time splits →
@@ -238,16 +208,10 @@ function Home() {
               </p>
               <div className="mt-3 flex flex-wrap gap-3 text-sm">
                 <Link
-                  to="/split-video-on-iphone"
+                  to="/split-video-on-phone"
                   className="font-medium text-accent hover:underline"
                 >
-                  iPhone guide →
-                </Link>
-                <Link
-                  to="/split-video-on-android"
-                  className="font-medium text-accent hover:underline"
-                >
-                  Android guide →
+                  iPhone & Android guide →
                 </Link>
               </div>
             </article>
@@ -389,25 +353,15 @@ function Home() {
               </p>
             </article>
             <article>
-              <h3 className="font-semibold">Does splitting reduce video quality?</h3>
+              <h3 className="font-semibold">Does it work on iPhone and Android?</h3>
               <p className="mt-2 text-sm leading-6 text-muted">
-                The default path is designed to avoid re-encoding. If you enable
-                the H.264 option when your browser supports it, the video is
-                re-encoded, which can take longer and may slightly change quality.
-              </p>
-            </article>
-            <article>
-              <h3 className="font-semibold">Does it work on iPhone?</h3>
-              <p className="mt-2 text-sm leading-6 text-muted">
-                Yes. Open SplitVideo in Safari, choose a video from Photos or
-                Files, split it, and use the share sheet to save the clips.
-              </p>
-            </article>
-            <article>
-              <h3 className="font-semibold">Does it work on Android?</h3>
-              <p className="mt-2 text-sm leading-6 text-muted">
-                Yes. Use Chrome or another modern browser, pick the video, split,
-                and save the resulting clips with the system share options.
+                Yes — Safari on iPhone, Chrome on Android. Pick a video from
+                Photos or Files, split it, and save the clips with the share
+                sheet. The{" "}
+                <Link to="/split-video-on-phone" className="font-medium text-accent hover:underline">
+                  phone guide
+                </Link>{" "}
+                covers each platform's specifics.
               </p>
             </article>
           </div>
@@ -434,6 +388,11 @@ function Home() {
           </h2>
           <ul className="mt-5 grid gap-3 sm:grid-cols-2">
             <li>
+              <Link to="/how-to-split-a-video" className="text-sm font-medium text-accent hover:underline">
+                How to split a video — the complete guide
+              </Link>
+            </li>
+            <li>
               <Link to="/free-video-splitter-no-watermark" className="text-sm font-medium text-accent hover:underline">
                 Free video splitter — no watermark
               </Link>
@@ -454,33 +413,18 @@ function Home() {
               </Link>
             </li>
             <li>
-              <Link to="/split-video-online" className="text-sm font-medium text-accent hover:underline">
-                Split video online
+              <Link to="/split-video-on-phone" className="text-sm font-medium text-accent hover:underline">
+                Split video on your phone — iPhone & Android
               </Link>
             </li>
             <li>
-              <Link to="/split-video-into-equal-parts" className="text-sm font-medium text-accent hover:underline">
-                Split video into equal parts
+              <Link to="/split-large-video-files" className="text-sm font-medium text-accent hover:underline">
+                Splitting very large video files — 15 GB case study
               </Link>
             </li>
             <li>
-              <Link to="/split-video-by-time" className="text-sm font-medium text-accent hover:underline">
-                Split video by time
-              </Link>
-            </li>
-            <li>
-              <Link to="/split-mp4-video" className="text-sm font-medium text-accent hover:underline">
-                Split MP4 video
-              </Link>
-            </li>
-            <li>
-              <Link to="/split-video-on-iphone" className="text-sm font-medium text-accent hover:underline">
-                Split video on iPhone
-              </Link>
-            </li>
-            <li>
-              <Link to="/split-video-on-android" className="text-sm font-medium text-accent hover:underline">
-                Split video on Android
+              <Link to="/video-splitter-troubleshooting" className="text-sm font-medium text-accent hover:underline">
+                Video splitter troubleshooting
               </Link>
             </li>
             <li>
