@@ -417,6 +417,9 @@ function Home() {
                 Split video on your phone — iPhone & Android
               </Link>
             </li>
+            <li><Link to="/split-video-on-pc" className="text-sm font-medium text-accent hover:underline">Split video on Windows PC</Link></li>
+            <li><Link to="/split-video-on-mac" className="text-sm font-medium text-accent hover:underline">Split video on Mac or MacBook</Link></li>
+            <li><Link to="/split-video-on-chromebook" className="text-sm font-medium text-accent hover:underline">Split video on Chromebook</Link></li>
             <li>
               <Link to="/split-large-video-files" className="text-sm font-medium text-accent hover:underline">
                 Splitting very large video files — 15 GB case study

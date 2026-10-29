@@ -504,3 +504,22 @@ test("vite plugin bakes og identity as a virtual module", () => {
   assert.match(plugin, /snapshotOgIdentity/);
 });
 
+
+test("editorial page metadata survives streaming injection with branding intact", () => {
+  const html = '<html><head><title>Mac guide</title><meta name="splitvideo:page-metadata" content="true"><meta property="og:title" content="Mac guide"><meta property="og:description" content="Local clips"><meta property="og:url" content="https://www.splitvideo.in/split-video-on-mac"><meta name="twitter:card" content="summary_large_image"></head><body>Guide</body></html>';
+  const ctx = { site: { title: "SplitVideo" }, host: "www.splitvideo.in" };
+  const injector = createHeadInjector(ctx);
+  const bytes = Buffer.from(html);
+  const out = Buffer.concat([
+    ...injector.push(bytes.subarray(0, 90)),
+    ...injector.push(bytes.subarray(90)),
+    ...injector.flush(),
+  ]).toString();
+  assert.match(out, /property="og:title" content="Mac guide"/);
+  assert.match(out, /property="og:description" content="Local clips"/);
+  assert.match(out, /property="og:url" content="https:\/\/www.splitvideo.in\/split-video-on-mac"/);
+  assert.equal(out.split('property="og:title"').length - 1, 1);
+  assert.match(out, /grok-app-builder\/extensions\.js/);
+  assert.match(out, /rel="manifest"/);
+  assert.equal(injectGrokPwaHead(out, ctx), out);
+});
