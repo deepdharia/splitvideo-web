@@ -185,6 +185,14 @@ function Page() {
         lists the common causes and fixes.
       </p>
 
+      <h2 className="text-xl font-semibold text-foreground">Using a computer instead?</h2>
+      <p>
+        For local recordings and desktop downloads, follow the guide for your device:
+        {" "}<Link to="/split-video-on-pc" className="text-accent hover:underline">Windows PC</Link>,
+        {" "}<Link to="/split-video-on-mac" className="text-accent hover:underline">Mac or MacBook</Link>, or
+        {" "}<Link to="/split-video-on-chromebook" className="text-accent hover:underline">Chromebook</Link>.
+      </p>
+
       <h2 className="text-xl font-semibold text-foreground">FAQ</h2>
       <div className="space-y-4">
         {FAQ.map((f) => (
