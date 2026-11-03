@@ -14,12 +14,12 @@ export const Route = createRootRoute({
       },
       {
         title:
-          "Split Video Online Free | SplitVideo — On-Device Video Splitter",
+          "Split Video Online | SplitVideo — On-Device Video Splitter",
       },
       {
         name: "description",
         content:
-          "SplitVideo is a free online video splitter. Split any video into equal parts or by time in your browser. No upload, no watermark. Works on iPhone, Android, and desktop.",
+          "SplitVideo is an online video splitter. Split any video into equal parts or by time in your browser. No upload, no watermark. Works on iPhone, Android, and desktop.",
       },
       { name: "robots", content: "index, follow, max-image-preview:large" },
       { name: "theme-color", content: "#08090d" },
@@ -30,7 +30,7 @@ export const Route = createRootRoute({
       {
         name: "keywords",
         content:
-          "split video, video splitter, split video online, split video into equal parts, split video by time, free video splitter, on device video splitter, split MP4, split video iPhone, split video Android",
+          "split video, video splitter, split video online, split video into equal parts, split video by time, video splitter, on device video splitter, split MP4, split video iPhone, split video Android",
       },
     ],
     links: [
@@ -60,11 +60,6 @@ gtag('config', 'G-ZY7KHKS87C');`,
           }}
         />
         <HeadContent />
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8886727331242294"
-          crossOrigin="anonymous"
-        />
       </head>
       <body className="min-h-dvh bg-background text-foreground">
         <PreviewHostBridge />

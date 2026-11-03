@@ -34,6 +34,7 @@ import {
   type SplitRange,
 } from "@/lib/media";
 import { clamp, formatBytes, formatTime } from "@/lib/time";
+import { hasPaidAccess } from "@/lib/supabase";
 import { cn } from "@/lib/utils";
 
 type Mode = "range" | "parts" | "interval" | "markers";
@@ -155,6 +156,7 @@ export function SplitterApp() {
     const controller = new AbortController();
     abortRef.current = controller;
     try {
+      if (!(await hasPaidAccess())) throw new Error("Please sign in with a paid account before exporting.");
       const results = await splitRanges(
         file,
         planned,
@@ -523,7 +525,7 @@ function DropZone({
       </span>
       <div className="max-w-md space-y-2">
         <h1 className="font-display text-3xl font-semibold tracking-tight sm:text-4xl">
-          Split Video Online — Free, On-Device, No Watermark
+          Split Video — On-Device, No Watermark
         </h1>
         <p className="text-muted">
           Drop a file here, or tap to choose from Photos or Files. Processing stays on-device — it is not uploaded.

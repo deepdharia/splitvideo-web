@@ -7,8 +7,8 @@ const FAQ = [
     a: "No — not partially, not temporarily. The file is opened by your browser and processed on your device; there is no server that receives it. You can verify this yourself: load the page, switch your phone to airplane mode, and split a video. It still works, because the work never needed a connection.",
   },
   {
-    q: "Is SplitVideo really free? What is the catch?",
-    a: "It is free, with no account and no watermark. The honest limits are physical, not commercial: up to 24 clips per run, and file size bounded by your device's memory. There is no server bill behind the tool, so there is nothing to recover from you.",
+    q: "Does SplitVideo require a purchase?",
+    a: "Yes. Sign in with Google and buy access once to use the tool. There is no free tool tier. The processing limits remain up to 24 clips per run and the available memory on your device.",
   },
   {
     q: "How do I split a video into equal parts?",

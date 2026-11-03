@@ -8,7 +8,7 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Contact SplitVideo.in. Reach us at build@splitvideo.in for questions, feedback, or support related to the free on-device video splitter.",
+          "Contact SplitVideo.in. Reach us at build@splitvideo.in for questions, feedback, or support related to the on-device video splitter.",
       },
       { property: "og:title", content: "Contact — SplitVideo.in" },
       { property: "og:url", content: "https://www.splitvideo.in/contact" },

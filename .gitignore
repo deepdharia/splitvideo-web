@@ -12,3 +12,8 @@ tmp
 !.grok/app-env.json
 routeTree.gen.ts
 src/routeTree.gen.ts
+
+.env
+.env.*
+!.env.example
+supabase/.temp

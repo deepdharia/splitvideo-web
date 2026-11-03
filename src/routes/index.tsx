@@ -1,25 +1,25 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { SplitterApp } from "@/components/splitter-app";
+import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-        title: "Split Video Online Free | SplitVideo — On-Device Video Splitter",
+        title: "Split Video Online | SplitVideo — On-Device Video Splitter",
       },
       {
         name: "description",
         content:
-          "SplitVideo — free online video splitter. Split any video into equal parts or by time in your browser. No upload, no watermark. Works on iPhone, Android & desktop.",
+          "SplitVideo — online video splitter. Split any video into equal parts or by time in your browser. No upload, no watermark. Works on iPhone, Android & desktop.",
       },
       {
         property: "og:title",
-        content: "Split Video Online Free | SplitVideo — On-Device Video Splitter",
+        content: "Split Video Online | SplitVideo — On-Device Video Splitter",
       },
       {
         property: "og:description",
         content:
-          "Free online video splitter. Split into equal parts or by time. No upload. Works on phone and desktop.",
+          "Online video splitter. Split into equal parts or by time. No upload. Works on phone and desktop.",
       },
       { property: "og:url", content: "https://www.splitvideo.in/" },
       { property: "og:type", content: "website" },
@@ -28,12 +28,12 @@ export const Route = createFileRoute("/")({
       { name: "twitter:card", content: "summary_large_image" },
       {
         name: "twitter:title",
-        content: "Split Video Online Free | SplitVideo",
+        content: "Split Video Online | SplitVideo",
       },
       {
         name: "twitter:description",
         content:
-          "Free online video splitter. Equal parts or by time. No upload. iPhone & Android.",
+          "Online video splitter. Equal parts or by time. No upload. iPhone & Android.",
       },
     ],
     links: [{ rel: "canonical", href: "https://www.splitvideo.in/" }],
@@ -50,18 +50,14 @@ export const Route = createFileRoute("/")({
                 "Split Video",
                 "SplitVideo.in",
                 "Online Video Splitter",
-                "Free Video Splitter",
+                "Video Splitter",
               ],
               url: "https://www.splitvideo.in/",
               description:
-                "Free online video splitter that works in your browser. Split any video into equal parts or by time. No upload, no watermark. On-device processing for iPhone, Android, and desktop.",
+                "Online video splitter that works in your browser. Split any video into equal parts or by time. No upload, no watermark. On-device processing for iPhone, Android, and desktop.",
               applicationCategory: "MultimediaApplication",
               operatingSystem: "Any (modern browser)",
-              offers: {
-                "@type": "Offer",
-                price: "0",
-                priceCurrency: "USD",
-              },
+              isAccessibleForFree: false,
               browserRequirements: "Requires a modern browser with File API and Media support (Chrome, Safari, Firefox, Edge).",
               featureList: [
                 "Split video into equal parts",
@@ -84,7 +80,7 @@ export const Route = createFileRoute("/")({
               logo: "https://www.splitvideo.in/favicon.svg",
               image: "https://www.splitvideo.in/og.jpg",
               description:
-                "SplitVideo is a free online video splitter. Split videos into equal parts or by time on your device — no upload required.",
+                "SplitVideo is an online video splitter. Split videos into equal parts or by time on your device — no upload required.",
               sameAs: ["https://www.linkedin.com/company/splitvideo/"],
             },
           ],
@@ -98,7 +94,23 @@ export const Route = createFileRoute("/")({
 function Home() {
   return (
     <>
-      <SplitterApp />
+      <header className="mx-auto flex max-w-5xl items-center justify-between px-4 py-6">
+        <Link to="/" className="font-display text-xl font-semibold">SplitVideo</Link>
+        <Link to="/account" className="text-sm font-medium">Sign in</Link>
+      </header>
+      <section className="mx-auto max-w-5xl px-4 pb-10 pt-8 sm:pt-16">
+        <div className="glass rounded-3xl p-7 sm:p-12">
+          <p className="text-xs font-medium uppercase tracking-[0.18em] text-muted">Your video. Your device.</p>
+          <h1 className="mt-5 max-w-3xl font-display text-4xl font-semibold leading-tight tracking-tight sm:text-6xl">Long recording.<br />Ready-to-use clips.</h1>
+          <p className="mt-5 max-w-xl text-base leading-7 text-muted">Split videos into equal parts, timed clips, or custom ranges. Process them in your browser, without uploading the original file.</p>
+          <div className="mt-7 flex flex-wrap gap-3">
+            <Button asChild size="lg"><Link to="/account">Get access</Link></Button>
+            <Button asChild size="lg" variant="outline"><a href="#how-it-works">See how it works</a></Button>
+          </div>
+          <p className="mt-4 text-sm text-muted">One-time purchase · Google sign-in · No free tool access</p>
+          <p className="mt-2 text-xs text-muted">Purchases opening soon. Explore the walkthrough below.</p>
+        </div>
+      </section>
 
       <section
         aria-labelledby="proof-title"
@@ -147,13 +159,13 @@ function Home() {
       >
         <div className="glass rounded-3xl p-6 sm:p-8">
           <p className="text-xs font-medium uppercase tracking-[0.18em] text-muted">
-            Free online video splitter
+            Online video splitter
           </p>
           <h2 id="how-it-works-title" className="mt-2 text-2xl font-semibold sm:text-3xl">
             Split video online — equal parts or by time, on your device
           </h2>
           <p className="mt-3 max-w-3xl text-sm leading-6 text-muted sm:text-base">
-            SplitVideo is a free browser-based video splitter for turning one long
+            SplitVideo is a paid browser-based video splitter for turning one long
             recording into smaller, useful clips. Choose a range, divide the video
             into equal parts, create clips at a fixed interval, or add your own cut
             points. Everything runs in your browser — the original video is not
@@ -243,7 +255,7 @@ function Home() {
             The goal was a tool that stays on the device, keeps the original
             quality by default, works in the phone browser, and makes equal-part
             and time-based splitting straightforward. That is what SplitVideo
-            delivers — a free, private, browser-based video splitter focused on
+            delivers — a paid, private, browser-based video splitter focused on
             practical creator workflows.
           </p>
         </div>
@@ -394,7 +406,7 @@ function Home() {
             </li>
             <li>
               <Link to="/free-video-splitter-no-watermark" className="text-sm font-medium text-accent hover:underline">
-                Free video splitter — no watermark
+                Video splitter — no watermark
               </Link>
             </li>
             <li>

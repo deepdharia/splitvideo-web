@@ -1,9 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SeoPageLayout } from "@/components/seo-page-layout";
 
-const title = "Split Video on Mac & MacBook — Free | SplitVideo";
+const title = "Split Video on Mac & MacBook — On-Device | SplitVideo";
 const description =
-  "Split video on Mac or MacBook in your browser. Use a free video splitter to create equal parts or custom clips, with no upload or watermark.";
+  "Split video on Mac or MacBook in your browser. Use a video splitter to create equal parts or custom clips, with no upload or watermark.";
 const url = "https://www.splitvideo.in/split-video-on-mac";
 const FAQ = [
   {
@@ -12,7 +12,7 @@ const FAQ = [
   },
   {
     q: "Is SplitVideo free on MacBook?",
-    a: "Yes. The browser-based splitter is free to use and does not add a watermark to exported clips.",
+    a: "SplitVideo requires Google sign-in and a one-time purchase. It does not add a watermark to exported clips.",
   },
   {
     q: "Will splitting reduce video quality?",
@@ -71,7 +71,7 @@ function Page() {
       </p>
       <p>
         <Link to="/" className="text-accent hover:underline">
-          Open the free video splitter
+          Open the video splitter
         </Link>
       </p>
       <h2 className="text-xl font-semibold text-foreground">

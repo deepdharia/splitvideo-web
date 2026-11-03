@@ -1,0 +1,5 @@
+project_id = "splitvideo"
+[functions.splitvideo-checkout]
+verify_jwt = false # Function validates the user's token with Supabase Auth.
+[functions.dodo-webhook]
+verify_jwt = false # Dodo requests are authenticated by their webhook signature.

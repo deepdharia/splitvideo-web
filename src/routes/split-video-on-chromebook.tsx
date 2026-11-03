@@ -1,9 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SeoPageLayout } from "@/components/seo-page-layout";
 
-const title = "Split Video on Chromebook — Free Splitter | SplitVideo";
+const title = "Split Video on Chromebook — On-Device Splitter | SplitVideo";
 const description =
-  "Split video on Chromebook with a free browser-based video splitter. Create equal parts or timed clips locally, without uploading your recording.";
+  "Split video on Chromebook with a paid browser-based video splitter. Create equal parts or timed clips locally, without uploading your recording.";
 const url = "https://www.splitvideo.in/split-video-on-chromebook";
 const FAQ = [
   {
@@ -65,13 +65,13 @@ function Page() {
     <SeoPageLayout title="Split video on Chromebook">
       <p className="text-foreground">
         Turn a presentation, lesson recording, or screen capture into smaller clips in your
-        Chromebook’s browser. SplitVideo is a free video splitter that processes the selected
+        Chromebook’s browser. SplitVideo is a video splitter that processes the selected
         recording locally, without uploading it for server-side encoding or adding a watermark. You
         do not need to install Android or Linux editing software for this workflow.
       </p>
       <p>
         <Link to="/" className="text-accent hover:underline">
-          Open the free video splitter
+          Open the video splitter
         </Link>
       </p>
       <h2 className="text-xl font-semibold text-foreground">
