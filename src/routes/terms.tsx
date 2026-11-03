@@ -8,7 +8,7 @@ export const Route = createFileRoute("/terms")({
       {
         name: "description",
         content:
-          "Terms of Service for SplitVideo.in, the free on-device browser video splitter.",
+          "Terms of Service for SplitVideo.in, the on-device browser video splitter.",
       },
       { property: "og:title", content: "Terms of Service — SplitVideo.in" },
       { property: "og:url", content: "https://www.splitvideo.in/terms" },
@@ -21,6 +21,9 @@ export const Route = createFileRoute("/terms")({
 function Page() {
   return (
     <SeoPageLayout title="Terms of Service">
+      <p>Paid access is being prepared. Purchases are not open yet. Before checkout opens,
+      the purchase price, scope of access, update entitlement and refund policy will
+      be published here and on the purchase page.</p>
       <p className="text-foreground">
         Last updated: 25 September 2026
       </p>
@@ -32,7 +35,7 @@ function Page() {
 
       <h2 className="text-xl font-semibold text-foreground">1. The Service</h2>
       <p>
-        SplitVideo.in provides a free, browser-based tool that allows you to
+        SplitVideo.in provides a paid, browser-based tool that allows you to
         split video files into parts (equal parts, time intervals, ranges, or
         custom cut points). Processing is performed in your browser on your
         device. We do not upload or store the original video files you select
@@ -85,10 +88,10 @@ function Page() {
         the video files and clips you create with the tool.
       </p>
 
-      <h2 className="text-xl font-semibold text-foreground">7. Advertising</h2>
+      <h2 className="text-xl font-semibold text-foreground">7. Account and payment information</h2>
       <p>
-        The Service may display advertisements (including Google AdSense). Your
-        use of the Service is also subject to the privacy practices described in
+        The paid version does not display AdSense advertising. Account and payment
+        information is handled according to
         our{" "}
         <Link to="/privacy" className="text-accent hover:underline">
           Privacy Policy

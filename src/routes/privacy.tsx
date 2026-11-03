@@ -8,7 +8,7 @@ export const Route = createFileRoute("/privacy")({
       {
         name: "description",
         content:
-          "Privacy Policy for SplitVideo.in. Video processing happens on your device. Information about cookies, Google AdSense, and how we handle data.",
+          "Privacy Policy for SplitVideo.in. Video processing happens on your device. Information about accounts, payments, and how we handle data.",
       },
       { property: "og:title", content: "Privacy Policy — SplitVideo.in" },
       { property: "og:url", content: "https://www.splitvideo.in/privacy" },
@@ -22,11 +22,11 @@ function Page() {
   return (
     <SeoPageLayout title="Privacy Policy">
       <p className="text-foreground">
-        Last updated: 25 September 2026
+        Preview update: 3 November 2026
       </p>
 
       <p>
-        SplitVideo.in (“we”, “us”, or “the site”) provides a free, browser-based
+        SplitVideo.in (“we”, “us”, or “the site”) provides a paid, browser-based
         video splitting tool. This Privacy Policy explains what information is
         collected, how it is used, and your choices.
       </p>
@@ -48,62 +48,37 @@ function Page() {
         <li>Information necessary to operate and secure the website</li>
       </ul>
       <p>
-        We do not require an account to use the tool, and we do not collect
-        personal information such as name or address solely for the purpose of
-        using the splitter.
+        Paid access requires a Google account. Supabase stores your account identifier,
+        email and profile information needed for sign-in. We store purchase and access
+        records to unlock the tool, handle support and prevent misuse. Dodo Payments
+        handles checkout and payment details; we do not store your card number.
+        Signing in does not give us access to your Gmail messages. Authentication
+        uses browser storage to keep you signed in. You can sign out or contact
+        build@splitvideo.in about your account and data.
       </p>
 
       <h2 className="text-xl font-semibold text-foreground">3. Cookies and similar technologies</h2>
       <p>
         The site may use cookies and similar technologies for essential
-        functionality, analytics, and advertising.
+        functionality and analytics.
       </p>
-      <p>
-        <strong>Google AdSense / advertising cookies:</strong> We use Google
-        AdSense to display ads. Google and its partners may use cookies (including
-        the DoubleClick cookie) to serve ads based on your prior visits to this
-        and other websites. You can opt out of personalized advertising by
-        visiting{" "}
-        <a
-          href="https://www.google.com/settings/ads"
-          className="text-accent hover:underline"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Google’s Ads Settings
-        </a>{" "}
-        or by visiting{" "}
-        <a
-          href="https://www.aboutads.info/choices/"
-          className="text-accent hover:underline"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          www.aboutads.info
-        </a>
-        .
-      </p>
-      <p>
-        Third-party vendors, including Google, use cookies to serve ads based on
-        a user’s prior visits to this website or other websites. Google’s use of
-        advertising cookies enables it and its partners to serve ads based on
-        visits to this site and/or other sites on the Internet.
-      </p>
+      <p>The paid version does not load Google AdSense advertising. We use Google
+      Analytics and Vercel Analytics for site usage and performance. Meta advertising
+      tracking is not enabled in this preview.</p>
 
       <h2 className="text-xl font-semibold text-foreground">4. How we use information</h2>
       <p>We use collected information to:</p>
       <ul className="list-disc space-y-1 pl-5">
         <li>Operate, maintain, and improve the website and tool</li>
         <li>Understand aggregate usage patterns</li>
-        <li>Display relevant advertising (via AdSense)</li>
+        <li>Verify purchases and manage paid access</li>
         <li>Protect against abuse and ensure security</li>
       </ul>
 
       <h2 className="text-xl font-semibold text-foreground">5. Data sharing</h2>
       <p>
         We do not sell personal information. Limited data may be processed by
-        service providers that help us run the site (hosting, analytics,
-        advertising). These providers are bound by their own privacy policies.
+        service providers that help us run the site (hosting, analytics, authentication and payments). These providers are bound by their own privacy policies.
       </p>
 
       <h2 className="text-xl font-semibold text-foreground">6. Children’s privacy</h2>

@@ -22,7 +22,7 @@ function Page() {
   return (
     <SeoPageLayout title="About SplitVideo">
       <p className="text-foreground">
-        SplitVideo.in is a free, browser-based video splitter that keeps your
+        SplitVideo.in is a paid, browser-based video splitter that keeps your
         files on your device.
       </p>
 

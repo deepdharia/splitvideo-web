@@ -21,12 +21,12 @@ export const Route = createFileRoute("/split-video-for-instagram-reels")({
     meta: [
       {
         title:
-          "Split Video for Instagram Reels — Free Clip Maker | SplitVideo",
+          "Split Video for Instagram Reels — Clip Maker | SplitVideo",
       },
       {
         name: "description",
         content:
-          "Split videos into Instagram Reels-length clips free. Every N sec intervals, custom cut points, batch ZIP download, up to 24 clips per run. No watermark, no upload — 100% on-device.",
+          "Split videos into Instagram Reels-length clips on your device. Every N sec intervals, custom cut points, batch ZIP download, up to 24 clips per run. No watermark, no upload — 100% on-device.",
       },
       {
         property: "og:title",
@@ -35,7 +35,7 @@ export const Route = createFileRoute("/split-video-for-instagram-reels")({
       {
         property: "og:description",
         content:
-          "Turn long videos into Reel-length clips. Free, no watermark, on-device.",
+          "Turn long videos into Reel-length clips. No watermark, on-device.",
       },
       {
         property: "og:url",
@@ -64,7 +64,7 @@ export const Route = createFileRoute("/split-video-for-instagram-reels")({
               "@type": "HowTo",
               name: "How to split a video into Instagram Reels",
               description:
-                "Turn a long recording into multiple Instagram Reels-length clips with SplitVideo's free on-device splitter.",
+                "Turn a long recording into multiple Instagram Reels-length clips with SplitVideo's on-device splitter.",
               step: [
                 {
                   "@type": "HowToStep",
@@ -112,7 +112,7 @@ function Page() {
         <Link to="/" className="text-accent hover:underline">
           video splitter
         </Link>{" "}
-        cuts your long video into Reels-length clips — free, watermark-free,
+        cuts your long video into Reels-length clips — watermark-free,
         and processed on your device.
       </p>
 

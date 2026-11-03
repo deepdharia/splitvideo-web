@@ -21,12 +21,12 @@ export const Route = createFileRoute("/split-video-for-youtube-shorts")({
     meta: [
       {
         title:
-          "Split Video for YouTube Shorts — Free Clip Maker | SplitVideo",
+          "Split Video for YouTube Shorts — Clip Maker | SplitVideo",
       },
       {
         name: "description",
         content:
-          "Turn a long recording into multiple YouTube Shorts-length clips with SplitVideo's free on-device splitter.",
+          "Turn a long recording into multiple YouTube Shorts-length clips with SplitVideo's on-device splitter.",
       },
       {
         property: "og:title",
@@ -35,7 +35,7 @@ export const Route = createFileRoute("/split-video-for-youtube-shorts")({
       {
         property: "og:description",
         content:
-          "Long video in, Shorts-length clips out. Free on-device splitter — no watermark, no upload.",
+          "Long video in, Shorts-length clips out. On-device splitter — no watermark, no upload.",
       },
       {
         property: "og:url",
@@ -64,7 +64,7 @@ export const Route = createFileRoute("/split-video-for-youtube-shorts")({
               "@type": "HowTo",
               name: "How to split a video into YouTube Shorts",
               description:
-                "Turn a long recording into multiple YouTube Shorts-length clips using SplitVideo's free on-device splitter.",
+                "Turn a long recording into multiple YouTube Shorts-length clips using SplitVideo's on-device splitter.",
               step: [
                 {
                   "@type": "HowToStep",
@@ -113,7 +113,7 @@ function Page() {
         <Link to="/" className="text-accent hover:underline">
           video splitter
         </Link>{" "}
-        slices your video into clips at Shorts-friendly lengths — free, no
+        slices your video into clips at Shorts-friendly lengths — no
         watermark, and everything happens on your device.
       </p>
 

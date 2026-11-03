@@ -21,12 +21,12 @@ export const Route = createFileRoute("/split-video-for-whatsapp-status")({
     meta: [
       {
         title:
-          "Split Video for WhatsApp Status — Free 90s Clip Splitter | SplitVideo",
+          "Split Video for WhatsApp Status — 90s Clip Splitter | SplitVideo",
       },
       {
         name: "description",
         content:
-          "Split long videos for WhatsApp Status free. 90-second parts, no watermark, no upload. Turn any recording into a multi-part status series in your browser.",
+          "Split long videos for WhatsApp Status on your device. 90-second parts, no watermark, no upload. Turn any recording into a multi-part status series in your browser.",
       },
       {
         property: "og:title",
@@ -35,7 +35,7 @@ export const Route = createFileRoute("/split-video-for-whatsapp-status")({
       {
         property: "og:description",
         content:
-          "Long video? Split it into 90s status-ready parts. Free, no watermark, on-device.",
+          "Long video? Split it into 90s status-ready parts. No watermark, on-device.",
       },
       {
         property: "og:url",
@@ -111,9 +111,9 @@ function Page() {
         WhatsApp cuts Status videos off at 90 seconds — so a 5-minute recording
         needs splitting first. SplitVideo's{" "}
         <Link to="/" className="text-accent hover:underline">
-          free video splitter
+          video splitter
         </Link>{" "}
-        divides any video into 90-second, status-ready parts in one go: free,
+        divides any video into 90-second, status-ready parts in one go:
         no watermark, right in your browser.
       </p>
 
@@ -134,7 +134,7 @@ function Page() {
         <li>
           Open the{" "}
           <Link to="/" className="text-accent hover:underline">
-            free video splitter
+            video splitter
           </Link>{" "}
           and drop in your video.
         </li>

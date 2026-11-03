@@ -104,7 +104,7 @@ function Page() {
         There are four useful ways to split a video, and the right one depends
         on what the clips are for. SplitVideo's{" "}
         <Link to="/" className="text-accent hover:underline">
-          free video splitter
+          video splitter
         </Link>{" "}
         does all four in your browser — equal parts, fixed time intervals,
         custom cut points, and single ranges — with no upload and no watermark.

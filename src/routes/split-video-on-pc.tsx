@@ -1,9 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SeoPageLayout } from "@/components/seo-page-layout";
 
-const title = "Split Video on PC — Free Video Splitter | SplitVideo";
+const title = "Split Video on PC — Video Splitter | SplitVideo";
 const description =
-  "Split video on your Windows PC with a free video splitter. Create equal parts or time-based clips in your browser, with no upload or watermark.";
+  "Split video on your Windows PC with a video splitter. Create equal parts or time-based clips in your browser, with no upload or watermark.";
 const url = "https://www.splitvideo.in/split-video-on-pc";
 const FAQ = [
   {
@@ -15,7 +15,7 @@ const FAQ = [
     a: "No. This workflow uses the browser-based tool without installing a separate Windows video editor.",
   },
   {
-    q: "Does the free video splitter add a watermark?",
+    q: "Does the video splitter add a watermark?",
     a: "No. The export pipeline does not add a watermark to your clips.",
   },
   {
@@ -62,7 +62,7 @@ export const Route = createFileRoute("/split-video-on-pc")({
 
 function Page() {
   return (
-    <SeoPageLayout title="Split video on PC with a free video splitter">
+    <SeoPageLayout title="Split video on PC with a video splitter">
       <p className="text-foreground">
         Turn a long Windows desktop or laptop recording into smaller clips without installing a
         desktop editor. SplitVideo processes the selected video locally in your browser; your
@@ -71,7 +71,7 @@ function Page() {
       </p>
       <p>
         <Link to="/" className="text-accent hover:underline">
-          Open the free video splitter
+          Open the video splitter
         </Link>
       </p>
       <h2 className="text-xl font-semibold text-foreground">
